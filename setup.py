@@ -6,7 +6,7 @@ Please follow the `entry_points` documentation for more details on how to config
 """
 
 from setuptools import find_packages, setup
-#from covid_analysis import __version__
+from covid_analysis import __version__
 
 setup(
     name="nyctaxi_trends",
