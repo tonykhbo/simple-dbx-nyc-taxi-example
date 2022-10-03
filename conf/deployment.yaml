@@ -1,0 +1,20 @@
+environments:
+  default:
+    strict_path_adjustment_policy: true
+    jobs:
+      - name: "nyctaxi_etl_integ"
+        new_cluster:
+          spark_version: "10.4.x-scala2.12"
+          num_workers: 1
+          node_type_id: "Standard_DS3_v2"
+        # existing_cluster_name: "tb-single-node" 
+        spark_python_task:
+          python_file: "file://jobs/nyctaxi_trends_notebook.py"
+      - name: "nyctaxi_etl_prod"
+        new_cluster:
+          spark_version: "10.4.x-scala2.12"
+          num_workers: 1
+          node_type_id: "m6gd.large"
+        spark_python_task:
+          python_file: "file://jobs/nyctaxi_trends_notebook.py"
+          parameters: ["--prod"]

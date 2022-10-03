@@ -1,0 +1,9 @@
+{
+    "environments": {
+        "default": {
+            "profile": "DEFAULT",
+            "workspace_dir": "/Shared/dbx/projects/databricks-dbx-covid-example",
+            "artifact_location": "dbfs:/dbx/databricks-dbx-covid-example"
+        }
+    }
+}
